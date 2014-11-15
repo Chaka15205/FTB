@@ -5,6 +5,7 @@ import shutil
 import tempfile
 import sys
 import os
+import time
 
 # EDIT THIS IF YOU HAVE CHANGED YOUR DIRECTORY NAMES.
 directory = 'work/navitem_input.txt'
@@ -27,10 +28,22 @@ def run():
         print "There was an issue using shutil! Trying to use os instead."
         os.rename(directory, new_dir)
 
+time_amount = time.clock()
 run()
+print ("Navitem list generated. It took " + str(time.clock() - time_amount) + " seconds")
+
+time.sleep(1)
+print ("Program is now exiting.")
+time.sleep(0.5)
+sys.exit()
 
 '''
 == Changelog ==
+=== 0.2.0 ===
+* NEW: Now tells you that it has finished, and how long it took.
+* NEW: Things aren't instant, because that bothers me.
+* FIX: Program exits properly.
+
 === 0.1.6 ===
 * FIX: Shoved everything in run() method
 
