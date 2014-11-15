@@ -41,7 +41,7 @@ sys.exit()
 == Changelog ==
 === 0.2.0 ===
 * NEW: Now tells you that it has finished, and how long it took.
-* NEW: Things aren't instant, because that bothers me.
+* NEW: Things aren't instant, because that bothers me (+ some console messages to tell you things)
 * FIX: Program exits properly.
 
 === 0.1.6 ===
