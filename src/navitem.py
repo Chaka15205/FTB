@@ -21,7 +21,7 @@ def run():
         with open(tmp.name, 'w') as ftmp:
             for line in finput:
                 x = str(line)
-                ftmp.write('\t-->{{NI|' + x.rstrip("\r\n") + "|mod=" + modname + "}}{{,}}<!--\n")
+                ftmp.write('\t-->{{NI|mod=' + modname + '|' + x.rstrip("\r\n") + "}}{{,}}<!--\n")
     try:
         shutil.copyfile(tmp.name, new_dir)
     except:
@@ -39,9 +39,12 @@ sys.exit()
 
 '''
 == Changelog ==
+=== 0.2.1 ===
+* FIX: Output text formatting is better.
+
 === 0.2.0 ===
 * NEW: Now tells you that it has finished, and how long it took.
-* NEW: Things aren't instant, because that bothers me (+ some console messages to tell you things)
+* NEW: Post-run things aren't instant, because that bothers me (+ some console messages to tell you things)
 * FIX: Program exits properly.
 
 === 0.1.6 ===
