@@ -1,11 +1,12 @@
 # Created by Eli Foster
-# 0.1.6
+# 0.2.1
 
 import shutil
 import tempfile
 import sys
 import os
 import time
+import gc
 
 # EDIT THIS IF YOU HAVE CHANGED YOUR DIRECTORY NAMES.
 directory = 'work/navitem_input.txt'
@@ -33,13 +34,19 @@ run()
 print ("Navitem list generated. It took " + str(time.clock() - time_amount) + " seconds")
 
 time.sleep(1)
-print ("Program is now exiting.")
+print ("Program is now exiting and clearing memory.")
 time.sleep(0.5)
+directory = None
+new_dir = None
+time_amount = None
+gc.collect()
+print ("Memory cleared as much as possible.")
 sys.exit()
 
 '''
 == Changelog ==
 === 0.2.1 ===
+* FIX: Variables cleared as much as possible before exit.
 * FIX: Output text formatting is better.
 
 === 0.2.0 ===
