@@ -1,4 +1,4 @@
-FTB-py
+FTB
 ======
 
 Stuff for the FTB Wiki
