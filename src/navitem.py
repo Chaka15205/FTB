@@ -1,5 +1,5 @@
 # Created by Eli Foster
-# 0.2.1
+# 0.2.2
 
 import shutil
 import tempfile
@@ -10,7 +10,7 @@ import gc
 
 # EDIT THIS IF YOU HAVE CHANGED YOUR DIRECTORY NAMES.
 directory = 'work/navitem_input.txt'
-new_dir = 'work/navitem_output.txt'
+new_dir = 'work/out/navitem_output.txt'
 
 def run():
     #These can be found on Template:G/Mods.
@@ -45,6 +45,9 @@ sys.exit()
 
 '''
 == Changelog ==
+=== 0.2.2 ===
+TWEAK: Now outputs in work/out/
+
 === 0.2.1 ===
 * FIX: Variables cleared as much as possible before exit.
 * FIX: Output text formatting is better.
